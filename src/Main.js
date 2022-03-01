@@ -11,41 +11,44 @@ import {
   Form,
   Img,
 } from "react-bootstrap";
-import CardText from "react-bootstrap/Card";
 import imgone from "./images/demoimgone.jpg";
 import imgtwo from "./images/demoimgtwo.jpg";
 import imgthree from "./images/demoimgthree.jpg";
 import imgfour from "./images/demoimgfour.jpg";
 import imgfive from "./images/demoimgfive.jpg";
+import { AiOutlineMail, AiOutlineArrowDown } from 'react-icons/ai'
 
 function Main() {
   return (
     <div className="">
-      <section id="home">
-        <Row className="home-content-wrapper">
+      <section id="banner">
+        <Row className="banner-content-wrapper">
           <Col className="home-content-info">
-            <div className="text-center">
-              <h2 className="home-content-header">Tristan Joynes</h2>
+            <div className="text-center p-5">
+              <h4 className="home-content-header">Hi, my name is Tristan</h4>
               <br></br>
-              <p className="home-content-sub">Software Developer</p>
+              <hr style={{height: "2px", opacity:"1", marginLeft:"20px",marginRight: "20px"}} />
+              <p className="home-content-sub">I am a Software Developer</p>
+              <p className="home-content-sub">Fitness Enthusiast</p>
+              <p className="home-content-sub">and a dog dad </p>
               <br></br>
               <div className=" btn-wrapper d-flex justify-content-around">
-                <div className="contact-view-btn text-center">
+                <div className=" text-center">
                   <Button
-                    className="btn"
-                    style={{ backgroundColor: "#6C91C2" }}
+                    className="contact-view-btn btn"
                     href="#contact"
                   >
                     Contact Me
+                    < AiOutlineMail size={20} style={{marginBottom: "2.5px", marginLeft:"8px"}} />
                   </Button>
                 </div>
-                <div className="project-view-btn text-center">
+                <div className=" text-center">
                   <Button
-                    className="btn"
-                    style={{ backgroundColor: "#6C91C2" }}
+                    className="project-view-btn btn"
                     href="#projects"
                   >
                     View Projects
+                    < AiOutlineArrowDown size={20} style={{marginBottom: "2.5px", marginLeft:"8px"}} />
                   </Button>
                 </div>
               </div>
@@ -61,40 +64,23 @@ function Main() {
       </section>
 
       <section id="projects">
-        <Container className="project-content-wrapper p-3" fluid>
-          <Row className="mb-2 gap-2">
-            <Col sm className="prjctcard main">
-              <img
-                src={imgone}
-                style={{ height: "inherit", width: "inherit" }}
-              />
+        <Container className="project-content-wrapper p-5" fluid>
+          <Row className="gap-3">
+            <Col className="prjctcard main" style={{height: "300px", width: "auto", border: "1px solid yellow"}} >
+
             </Col>
-            <Col sm className="prjctcard main">
-              <img
-                src={imgtwo}
-                style={{ height: "inherit", width: "inherit" }}
-              />
+            <Col className="prjctcard main" style={{height: "300px", width: "auto", border: "1px solid yellow"}}>
             </Col>
           </Row>
+          <Row className="justify-content-center gap-2">
+            <Col className="prjctcard side" style={{height: "400px", width: "auto", border: "1px solid yellow"}}>
+             
+            </Col>
+            <Col className="prjctcard side" style={{height: "400px", width: "auto", border: "1px solid yellow"}}>
+   
+            </Col>
+            <Col className="prjctcard side" style={{height: "400px", width: "auto", border: "1px solid yellow"}}>
 
-          <Row className="justify-content-center">
-            <Col className="prjctcard side d-none d-sm-block">
-              <img
-                src={imgthree}
-                style={{ height: "inherit", width: "inherit" }}
-              />
-            </Col>
-            <Col className="prjctcard side d-none d-sm-block">
-              <img
-                src={imgfour}
-                style={{ height: "inherit", width: "inherit" }}
-              />
-            </Col>
-            <Col className="prjctcard side d-none d-sm-block">
-              <img
-                src={imgfive}
-                style={{ height: "inherit", width: "inherit" }}
-              />
             </Col>
           </Row>
         </Container>

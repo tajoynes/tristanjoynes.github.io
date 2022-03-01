@@ -1,38 +1,48 @@
-.home-content-wrapper {
-    height: 100vh;
+.banner-content-wrapper {
+    height: 80vh;
     width: auto;
-    background: peru;
+    background-image: url(./images/demoimgone.jpg);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .home-content-info {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    color: aliceblue;
+    background-color: rgba(0, 3, 165, 0.582);
 }
 .home-content-header {
-    font-size: 70px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 1.5rem;
+    font-size: 35px;
+    font-weight: 600;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: .9rem;
 }
 .home-content-sub {
-    font-family: monospace;
-    letter-spacing: 1.1rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: .5rem;
 }
 .contact-view-btn {
-    border: 1px solid #000;
-    border-radius: 5px;
+    border: 2px solid #000;
+    background: transparent;
+    border-radius: 0;
     transition: 700ms ease-in-out;
 }
 .project-view-btn {
-    border: 1px solid #000;
-    border-radius: 5px;
+    border: 2px solid #000;
+    background: transparent;
+    border-radius: 0;
     transition: 700ms ease-in-out;
 }
 .contact-view-btn:hover {
     background: #272d33;
+    border: 2px solid #FFF;
     transform: scale(1.10);
 }
 .project-view-btn:hover {
     background: #272d33;
+    border: 2px solid #FFF;
     transform: scale(1.10);
 }
 .about-content-wrapper {
@@ -46,21 +56,12 @@
     background:midnightblue;
 }
 .prjctcard.main {
- height: 100%;
- width: 100%;
+
 }
 .prjctcard.side {
-    height: 250px;
-    width: 250px;
-    overflow: hidden;
+
 }
-.prjctcard-text {
-    opacity: 0;
-    transition: opacity 700ms ease-in-out;
-}
-.prjctcard:hover .prjctcard-text {
-    opacity: 1;
-}
+
 .resume-content-wrapper {
     height: 80vh;
     width: auto;

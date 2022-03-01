@@ -6,18 +6,20 @@
 }
 .nav {
   height: 40px;
-  background: #6C91C2;
+  background: transparent;
 }
 .nav-icons {
-  color: #373f47;
+  color: #000000;
   transition: 500ms ease-in-out;
 }
 .nav-icons:hover {
   color: #8b8982;
   transform: scale(1.05);
 }
-.main-content-left {
+NavbarBrand, .initials {
+  color: #fff;
 }
+
 .main-name {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;

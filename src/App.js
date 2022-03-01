@@ -21,11 +21,11 @@ function App() {
                 className="d-inline-block align-top"
               />
             </NavbarBrand>
-          <IconContext.Provider value={{ className: "nav-icons", size: "1.8rem" }}>
+          <IconContext.Provider value={{ className: "nav-icons", size: "2.1rem" }}>
             <Container className="justify-content-center">
               <Nav>
               <Nav.Item>
-                  <Nav.Link href="#home">
+                  <Nav.Link href="#banner">
                     <AiOutlineHome />
                   </Nav.Link>
                 </Nav.Item>
@@ -51,8 +51,8 @@ function App() {
                 </Nav.Item>
               </Nav>
             </Container>
-            <NavbarBrand>
-              taj.
+            <NavbarBrand >
+              <p className="initials">taj.</p>
             </NavbarBrand>
             </IconContext.Provider>
           </Navbar>
