@@ -1,0 +1,42 @@
+.display-wrapper {
+  background: #c3c9e9;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+.nav {
+  height: 40px;
+  background: #6C91C2;
+}
+.nav-icons {
+  color: #373f47;
+  transition: 500ms ease-in-out;
+}
+.nav-icons:hover {
+  color: #8b8982;
+  transform: scale(1.05);
+}
+.main-content-left {
+}
+.main-name {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  font-size: 50px;
+}
+.main-heading {
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  color: #000;
+}
+
+.return {
+  display: inline-block;
+  position: absolute;
+  position: sticky;
+  bottom: 0;
+ border: #373f47;
+ background: #fff;
+}

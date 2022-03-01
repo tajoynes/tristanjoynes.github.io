@@ -1,0 +1,84 @@
+.home-content-wrapper {
+    height: 100vh;
+    width: auto;
+    background: peru;
+}
+.home-content-info {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-content-header {
+    font-size: 70px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1.5rem;
+}
+.home-content-sub {
+    font-family: monospace;
+    letter-spacing: 1.1rem;
+}
+.contact-view-btn {
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: 700ms ease-in-out;
+}
+.project-view-btn {
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: 700ms ease-in-out;
+}
+.contact-view-btn:hover {
+    background: #272d33;
+    transform: scale(1.10);
+}
+.project-view-btn:hover {
+    background: #272d33;
+    transform: scale(1.10);
+}
+.about-content-wrapper {
+    height: 100vh;
+    width: auto;
+    background: chartreuse;
+}
+.project-content-wrapper {
+    height: 100vh;
+    width: auto;
+    background:midnightblue;
+}
+.prjctcard.main {
+ height: 100%;
+ width: 100%;
+}
+.prjctcard.side {
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+}
+.prjctcard-text {
+    opacity: 0;
+    transition: opacity 700ms ease-in-out;
+}
+.prjctcard:hover .prjctcard-text {
+    opacity: 1;
+}
+.resume-content-wrapper {
+    height: 80vh;
+    width: auto;
+}
+.resume-btn {
+    border-radius: 0;
+    border: 1px solid #000;
+    background: transparent;
+    color: #000;
+    transition: 700ms ease-in-out;
+}
+.resume-btn:hover {
+    background: #272d33;
+    transform: scale(1.10);
+}
+
+.contact-content-wrapper {
+    height: 60vh;
+    width: auto;
+    background:orange
+}
