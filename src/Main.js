@@ -9,14 +9,19 @@ import {
   Button,
   Container,
   Form,
-  Img,
+  Figure,
 } from "react-bootstrap";
 import imgone from "./images/demoimgone.jpg";
 import imgtwo from "./images/demoimgtwo.jpg";
 import imgthree from "./images/demoimgthree.jpg";
 import imgfour from "./images/demoimgfour.jpg";
 import imgfive from "./images/demoimgfive.jpg";
-import { AiOutlineMail, AiOutlineArrowDown } from 'react-icons/ai'
+import {
+  AiOutlineMail,
+  AiOutlineArrowDown,
+  AiOutlineEye,
+  AiOutlineDownload,
+} from "react-icons/ai";
 
 function Main() {
   return (
@@ -27,28 +32,35 @@ function Main() {
             <div className="text-center p-5">
               <h4 className="home-content-header">Hi, my name is Tristan</h4>
               <br></br>
-              <hr style={{height: "2px", opacity:"1", marginLeft:"20px",marginRight: "20px"}} />
+              <hr
+                style={{
+                  height: "2px",
+                  opacity: "1",
+                  marginLeft: "20px",
+                  marginRight: "20px",
+                }}
+              />
               <p className="home-content-sub">I am a Software Developer</p>
               <p className="home-content-sub">Fitness Enthusiast</p>
               <p className="home-content-sub">and a dog dad </p>
               <br></br>
               <div className=" btn-wrapper d-flex justify-content-around">
                 <div className=" text-center">
-                  <Button
-                    className="contact-view-btn btn"
-                    href="#contact"
-                  >
+                  <Button className="contact-view-btn btn" href="#contact">
                     Contact Me
-                    < AiOutlineMail size={20} style={{marginBottom: "2.5px", marginLeft:"8px"}} />
+                    <AiOutlineMail
+                      size={20}
+                      style={{ marginBottom: "2.5px", marginLeft: "8px" }}
+                    />
                   </Button>
                 </div>
                 <div className=" text-center">
-                  <Button
-                    className="project-view-btn btn"
-                    href="#projects"
-                  >
+                  <Button className="project-view-btn btn" href="#projects">
                     View Projects
-                    < AiOutlineArrowDown size={20} style={{marginBottom: "2.5px", marginLeft:"8px"}} />
+                    <AiOutlineArrowDown
+                      size={20}
+                      style={{ marginBottom: "2.5px", marginLeft: "8px" }}
+                    />
                   </Button>
                 </div>
               </div>
@@ -64,34 +76,65 @@ function Main() {
       </section>
 
       <section id="projects">
-        <Container className="project-content-wrapper p-5" fluid>
-          <Row className="gap-3">
-            <Col className="prjctcard main" style={{height: "300px", width: "auto", border: "1px solid yellow"}} >
-
+        <div className="project-content-wrapper d-block pt-5 ps-5 pe-5">
+          <div className="project-heading justify-content-center text-center mb-2">
+            <h4>Projects</h4>
+          </div>
+          <Row className="gap-3 mb-2">
+            <Col xs className="prjctcard main">
+              <div className="prjct-wrapper">
+                <h5 className="prjct-heading">Project 1 Name</h5>
+                <p className="prjct-desc">
+                  Description, This project was built using HTML, JavaScript,
+                  CSS.
+                </p>
+              </div>
             </Col>
-            <Col className="prjctcard main" style={{height: "300px", width: "auto", border: "1px solid yellow"}}>
+            <Col className="prjctcard main">
+              <div className="prjct-wrapper">
+                <h5 className="prjct-heading">Project 1 Name</h5>
+                <p className="prjct-desc">
+                  Description, This project was built using HTML, JavaScript,
+                  CSS.
+                </p>
+              </div>
             </Col>
           </Row>
-          <Row className="justify-content-center gap-2">
-            <Col className="prjctcard side" style={{height: "400px", width: "auto", border: "1px solid yellow"}}>
-             
-            </Col>
-            <Col className="prjctcard side" style={{height: "400px", width: "auto", border: "1px solid yellow"}}>
-   
-            </Col>
-            <Col className="prjctcard side" style={{height: "400px", width: "auto", border: "1px solid yellow"}}>
-
+          <Row className="mb-2">
+            <Col className="prjctcard main">
+              <div className="prjct-wrapper">
+                <h5 className="prjct-heading">Project 1 Name</h5>
+                <p className="prjct-desc">
+                  Description, This project was built using HTML, JavaScript,
+                  CSS.
+                </p>
+              </div>
             </Col>
           </Row>
-        </Container>
+          <Row>
+            <Col className="prjctcard main">
+              <div className="prjct-wrapper">
+                <h5 className="prjct-heading">Project 1 Name</h5>
+                <p className="prjct-desc">
+                  Description, This project was built using HTML, JavaScript,
+                  CSS.
+                </p>
+              </div>
+            </Col>
+          </Row>
+        </div>
       </section>
 
       <section id="resume">
-        <Row className="resume-content-wrapper">
-          <Col xs style={{ backgroundColor: "#FFF" }}>
+        <Row className="resume-content-wrapper p-5">
+          <Col xs>
             <Container
               className="justify-content-center"
-              style={{ border: "1px solid #000", height: "100%" }}
+              style={{
+                border: "1px solid #000",
+                height: "100%",
+                position: "relative",
+              }}
             >
               <div className="p-5">
                 <h2 className="display-3">My Resume</h2>
@@ -106,9 +149,30 @@ function Main() {
                   cupidatat non proident, sunt in culpa qui officia deserunt
                   mollit anim id est laborum."
                 </p>
-                <div className="resum-btn-wrapper d-flex gap-5">
-                  <Button className="resume-btn">View resume</Button>
-                  <Button className="resume-btn">Download resume</Button>
+                <Figure>
+                  <Figure.Image
+                    width={171}
+                    height={180}
+                    alt="171x180"
+                    src={imgone}
+                    style={{ position: "absolute", top: "50px", right: "10px" }}
+                  />
+                </Figure>
+                <div className="resum-btn-wrapper d-flex justify-content-center gap-5">
+                  <Button className="resume-btn">
+                    View resume{" "}
+                    <AiOutlineEye
+                      size={20}
+                      style={{ marginBottom: "2.5px", marginLeft: "8px" }}
+                    />
+                  </Button>
+                  <Button className="resume-btn">
+                    Download resume{" "}
+                    <AiOutlineDownload
+                      size={20}
+                      style={{ marginBottom: "2.5px", marginLeft: "8px" }}
+                    />
+                  </Button>
                 </div>
               </div>
             </Container>
@@ -118,7 +182,7 @@ function Main() {
 
       <section id="contact">
         <Row className="contact-content-wrapper">
-          <Col>
+          <Col className="contact-form-wrapper p-5">
             <Form>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
