@@ -25,26 +25,33 @@
     letter-spacing: .5rem;
 }
 .contact-view-btn {
-    border: 2px solid #000;
+    border: 1px solid #000;
     background: transparent;
-    border-radius: 0;
-    transition: 700ms ease-in-out;
+    border-radius: 2px;
+    transition: 500ms ease-in-out;
+}
+.banner-icons {
+    transition: 500ms ease-in-out;
 }
 .project-view-btn {
-    border: 2px solid #000;
+    border: 1px solid #000;
     background: transparent;
-    border-radius: 0;
-    transition: 700ms ease-in-out;
+    border-radius: 2px;
+    transition: 500ms ease-in-out;
 }
 .contact-view-btn:hover {
-    background: #17B890;
-    border: 2px solid #FFF;
+    border: 1px solid #17B890;
     transform: scale(1.10);
 }
+.contact-view-btn:hover > .banner-icons{
+    color: #17B890;
+}
 .project-view-btn:hover {
-    background: #17B890;
-    border: 2px solid #FFF;
+    border: 1px solid #17B890;
     transform: scale(1.10);
+}
+.project-view-btn:hover > .banner-icons {
+    color: #17B890;
 }
 .about-content-wrapper {
     height: 60vh;
@@ -67,8 +74,9 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 padding: 0;
-height: 210px;
+height: 250px;
 width: auto;
+border-radius: 5px;
 box-shadow: 0px 2px 20px -3px rgba(0,0,0,0.8);
 }
 .prjct-wrapper {
@@ -77,34 +85,41 @@ opacity: 0;
 height: 100%;
 width: 100%;
 margin: 0;
-transition: 1000ms ease-in-out;
+transition: 700ms ease-in-out;
 }
 
 .prjctcard.main:hover > .prjct-wrapper, .project-heading {
     opacity: 0.3;
     opacity: 1;
     color: #9DC5BB;
+    border-radius: 5px;
+    border: 1px solid #17B890;
 }
 .resume-content-wrapper {
     height: 100%;
     width: auto;
     background: #E1E7E7;
 }
+.resume-icons {
+    transition: 500ms ease-in-out;
+}
 .resume-btn {
-    border: 2px solid #000;
+    border: 1px solid #000;
     color: #000;
     background: transparent;
-    border-radius: 0;
-    transition: 700ms ease-in-out;
+    border-radius: 2px;
+    transition: 500ms ease-in-out;
 }
 .resume-btn:hover {
-    background: #17B890;
-    border: 2px solid #FFF;
-    transform: scale(1.10);
+    border: 1px solid #17B890;
+    transform: scale(1.05);
+}
+.resume-btn:hover > .resume-icons {
+    color: #17B890;
 }
 
 .contact-content-wrapper {
-    height: 60vh;
+    height: 100%;
     width: auto;
     background:#E1E7E7;
 }
