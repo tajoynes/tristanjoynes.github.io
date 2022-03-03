@@ -9,7 +9,8 @@ import {
   Button,
   Container,
   Form,
-  Stack,
+  Navbar,
+  NavbarBrand,
 } from "react-bootstrap";
 import imgone from "./images/demoimgone.jpg";
 import imgtwo from "./images/demoimgtwo.jpg";
@@ -23,16 +24,18 @@ import {
   AiOutlineDownload,
   AiFillForward,
   AiFillPhone,
-  AiOutlineEnvironment,
+  AiFillMail,
+  AiFillEnvironment,
 } from "react-icons/ai";
 import { IconContext } from "react-icons";
 
 function Main() {
   return (
-    <div className="">
+    <div>
+      {/* --------------------------> Banner/Nav <-------------------------- */}
       <section id="banner">
         <div className="banner-content-wrapper">
-          <Row className="justify-content-center">
+          <Row className="banner-row justify-content-center">
             <Col className="home-content-info p-5">
               <div className="text-center p-5">
                 <h4 className="home-content-header">Hi, my name is Tristan</h4>
@@ -98,13 +101,13 @@ function Main() {
           </Row>
         </div>
       </section>
-
+      {/* --------------------------> About <-------------------------- */}
       <section id="about">
         <Row className="about-content-wrapper">
           <Col></Col>
         </Row>
       </section>
-
+      {/* --------------------------> Project <-------------------------- */}
       <section id="projects" className="project-header-wrapper">
         <Row className="text-center p-4">
           <Col>
@@ -112,14 +115,13 @@ function Main() {
           </Col>
         </Row>
       </section>
-
       <section>
         <div className="project-content-wrapper d-block px-5 py-3">
           <Row>
             <Col className="mb-2">
               <hr
                 style={{
-                  backgroundColor: "#082D0F",
+                  backgroundColor: "#17B890",
                   height: "5px",
                   opacity: "1",
                   marginLeft: "20px",
@@ -172,7 +174,7 @@ function Main() {
             <Col className="">
               <hr
                 style={{
-                  backgroundColor: "#082D0F",
+                  backgroundColor: "#17B890",
                   height: "5px",
                   opacity: "1",
                   marginLeft: "20px",
@@ -183,7 +185,7 @@ function Main() {
           </Row>
         </div>
       </section>
-
+      {/* --------------------------> Resume <-------------------------- */}
       <section id="resume">
         <Row className="resume-content-wrapper ps-2 pe-2">
           <Col xs className="">
@@ -224,14 +226,14 @@ function Main() {
                 />
                 <div className="resume-btn-wrapper d-flex justify-content-evenly px-3 mt-2">
                   <IconContext.Provider value={{ className: "resume-icons" }}>
-                    <button className="resume-btn text-nowrap p-2">
+                    <button className="resume-btn text-nowrap py-2 px-5 d-none d-md-block">
                       View resume{" "}
                       <AiOutlineEye
                         size={20}
                         style={{ marginBottom: "2.5px", marginLeft: "8px" }}
                       />
                     </button>
-                    <button className="resume-btn text-nowrap">
+                    <button className="resume-btn text-nowrap py-2 px-5">
                       Download resume{" "}
                       <AiOutlineDownload
                         size={20}
@@ -245,13 +247,13 @@ function Main() {
           </Col>
         </Row>
       </section>
-
+      {/* --------------------------> Contact <-------------------------- */}
       <section id="contact">
         <Container className="contact-content-wrapper pt-5" fluid>
           <Row className="">
             <Col>
               <div className="resume-btn-wrapper d-flex justify-content-evenly px-3 mt-2">
-                <button className="resume-btn text-nowrap p-2">
+                <button className="contact-header text-nowrap py-2 px-5">
                   Get In Touch
                 </button>
               </div>
@@ -271,57 +273,124 @@ function Main() {
               </p>
             </Col>
           </Row>
-          <Row className="pb-5">
-            <Col className="contact-form-wrapper pt-5 d-none d-md-block">
-              <Card>
-                <AiFillPhone />
-                Contact Me:<br></br> +1 (901) 496-7584
-              </Card>
-              <Card>
-                <AiOutlineMail />
-                Email Address<br></br>tajoynes@gmail.com
-              </Card>
-              <Card>
-                <AiOutlineEnvironment />
-                Location<br></br>Houston, TX
-              </Card>
+          <Row className="contact-form-wrapper">
+            <Col className="contact-form-col d-none d-md-block">
+              <IconContext.Provider value={{ size: "1.4rem" }}>
+                <Row className="contact-form-row">
+                  <Col className="contact-card d-flex justify-content-center py-4">
+                    <AiFillPhone
+                      style={{
+                        color: "#FFF",
+                        marginTop: "10px",
+                        marginRight: "10px",
+                      }}
+                    />
+                    <p className="contact-card-header">
+                      <span>Contact Me:</span>
+                      <br></br>
+                      <span className="contact-sub">+1 (901) 496-7584</span>
+                    </p>
+                  </Col>
+                </Row>
+                <Row className="contact-form-row">
+                  <Col className="contact-card d-flex justify-content-center py-4">
+                    <AiFillMail
+                      style={{
+                        color: "#FFF",
+                        marginTop: "10px",
+                        marginRight: "10px",
+                      }}
+                    />
+                    <p className="contact-card-header">
+                      <span>Email Address</span>
+                      <br></br>
+                      <span className="contact-sub">tajoynes@gmail.com</span>
+                    </p>
+                  </Col>
+                </Row>
+                <Row className="contact-form-row">
+                  <Col className="contact-card d-flex justify-content-center py-4">
+                    <AiFillEnvironment
+                      style={{
+                        color: "#FFF",
+                        marginTop: "10px",
+                        marginRight: "10px",
+                      }}
+                    />
+                    <p className="contact-card-header">
+                      <span>Location</span>
+                      <br></br>
+                      <span className="contact-sub">Houston, TX</span>
+                    </p>
+                  </Col>
+                </Row>
+              </IconContext.Provider>
             </Col>
-            <Col>
+            <Col className="py-3 px-4">
               <Form>
-                <Row className="mb-3">
-                  <Form.Group as={Col} controlId="formGridEmail">
-                    <Form.Control type="email" placeholder="Name" />
+                <Row className="mt-3 mb-3">
+                  <Form.Group as={Col} controlId="formBasicText">
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control
+                      type="text"
+                      style={{
+                        color: "#FFF",
+                        backgroundColor: "#1f1e38",
+                        border: "0.25px solid #1f1e38",
+                      }}
+                    />
                   </Form.Group>
-
-                  <Form.Group as={Col} controlId="formGridPassword">
-                    <Form.Control type="password" placeholder="Email" />
+                  <Form.Group as={Col} controlId="formBasicEmail">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control
+                      type="email"
+                      style={{
+                        color: "#FFF",
+                        backgroundColor: "#1f1e38",
+                        border: "0.25px solid #1f1e38",
+                      }}
+                    />
                   </Form.Group>
                 </Row>
-
-                <Row className="mb-3">
-                  <Form.Group as={Col} controlId="formGridEmail">
-                    <Form.Control type="email" placeholder="Phone" />
-                  </Form.Group>
-
-                  <Form.Group as={Col} controlId="formGridPassword">
-                    <Form.Control type="password" placeholder="Subject" />
-                  </Form.Group>
-                </Row>
-
                 <Form.Group
                   className="mb-3"
                   controlId="exampleForm.ControlTextarea1"
                 >
-                  <Form.Control placeholder="Message" as="textarea" rows={3} />
+                  <Form.Label>Message</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    rows={6}
+                    style={{
+                      color: "#FFF",
+                      backgroundColor: "#1f1e38",
+                      border: "0.25px solid #1f1e38",
+                    }}
+                  />
                 </Form.Group>
-                <Row className="mb-3"></Row>
-                <button className="resume-btn text-nowrap p-2" type="submit">
-                  Send Message
-                </button>
+                <div className="d-flex justify-content-evenly">
+                  <button
+                    className="form-send-btn text-nowrap py-2 px-5"
+                    type="submit"
+                  >
+                    Send Message
+                  </button>
+                  <button
+                    className="form-clr-btn text-nowrap py-2 px-3"
+                    type="submit"
+                  >
+                    Clear
+                  </button>
+                </div>
               </Form>
             </Col>
           </Row>
-          <p className="text-center">Copyright © 2020 All Rights Reserved.</p>
+          <Row>
+            <Col>
+              <p className="copyright-text text-center">
+                Copyright © 2020 All Rights Reserved.
+              </p>
+            </Col>
+          </Row>
         </Container>
       </section>
     </div>

@@ -27,7 +27,7 @@ function App() {
               />
             </NavbarBrand>
             <IconContext.Provider
-              value={{ className: "nav-icons", size: "1.5rem" }}
+              value={{ className: "nav-icons", size: "1.8rem" }}
             >
               <Container className="justify-content-center" fluid>
                 <Nav>
