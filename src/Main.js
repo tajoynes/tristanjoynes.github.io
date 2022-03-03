@@ -192,7 +192,6 @@ function Main() {
             <Container
               className=""
               style={{
-                border: "1px solid #17B890",
                 height: "100%",
                 position: "relative",
                 borderRadius: "5px",
@@ -212,9 +211,46 @@ function Main() {
                     marginRight: "20px",
                   }}
                 />
-                <Card className="" style={{ height: "100%", width: "100%" }}>
-                  <img src={imgone} height="auto" width="auto" />
-                </Card>
+                <div className="pe-5 ps-5">
+                  <Row className="d-flex gap-5">
+                    <Col sm className="resume-content d-none d-md-block">
+                      <div className="resume-btn-wrapper d-flex justify-content-evenly px-3 mt-2">
+                        <IconContext.Provider
+                          value={{ className: "resume-icons" }}
+                        >
+                          <button className="resume-btn text-nowrap py-2 px-5 d-none d-md-block">
+                            View resume{" "}
+                            <AiOutlineEye
+                              size={20}
+                              style={{
+                                marginBottom: "2.5px",
+                                marginLeft: "8px",
+                              }}
+                            />
+                          </button>
+                        </IconContext.Provider>
+                      </div>
+                    </Col>
+                    <Col sm className="resume-content">
+                      <div className="resume-btn-wrapper d-flex justify-content-evenly px-3 mt-2">
+                        <IconContext.Provider
+                          value={{ className: "resume-icons" }}
+                        >
+                          <button className="resume-btn text-nowrap py-2 px-5">
+                            Download resume{" "}
+                            <AiOutlineDownload
+                              size={20}
+                              style={{
+                                marginBottom: "2.5px",
+                                marginLeft: "8px",
+                              }}
+                            />
+                          </button>
+                        </IconContext.Provider>
+                      </div>
+                    </Col>
+                  </Row>
+                </div>
                 <hr
                   style={{
                     backgroundColor: "#17B890",
@@ -224,24 +260,6 @@ function Main() {
                     marginRight: "20px",
                   }}
                 />
-                <div className="resume-btn-wrapper d-flex justify-content-evenly px-3 mt-2">
-                  <IconContext.Provider value={{ className: "resume-icons" }}>
-                    <button className="resume-btn text-nowrap py-2 px-5 d-none d-md-block">
-                      View resume{" "}
-                      <AiOutlineEye
-                        size={20}
-                        style={{ marginBottom: "2.5px", marginLeft: "8px" }}
-                      />
-                    </button>
-                    <button className="resume-btn text-nowrap py-2 px-5">
-                      Download resume{" "}
-                      <AiOutlineDownload
-                        size={20}
-                        style={{ marginBottom: "2.5px", marginLeft: "8px" }}
-                      />
-                    </button>
-                  </IconContext.Provider>
-                </div>
               </div>
             </Container>
           </Col>
@@ -253,9 +271,9 @@ function Main() {
           <Row className="">
             <Col>
               <div className="resume-btn-wrapper d-flex justify-content-evenly px-3 mt-2">
-                <button className="contact-header text-nowrap py-2 px-5">
+                <p className="contact-header text-nowrap py-2 px-5">
                   Get In Touch
-                </button>
+                </p>
               </div>
               <hr
                 style={{
@@ -330,7 +348,7 @@ function Main() {
               <Form>
                 <Row className="mt-3 mb-3">
                   <Form.Group as={Col} controlId="formBasicText">
-                    <Form.Label>Name</Form.Label>
+                    <Form.Label className="contactlabel">Name</Form.Label>
                     <Form.Control
                       type="text"
                       style={{
@@ -341,7 +359,7 @@ function Main() {
                     />
                   </Form.Group>
                   <Form.Group as={Col} controlId="formBasicEmail">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label className="contactlabel">Email</Form.Label>
                     <Form.Control
                       type="email"
                       style={{
@@ -356,7 +374,7 @@ function Main() {
                   className="mb-3"
                   controlId="exampleForm.ControlTextarea1"
                 >
-                  <Form.Label>Message</Form.Label>
+                  <Form.Label className="contactlabel">Message</Form.Label>
                   <Form.Control
                     as="textarea"
                     rows={6}
