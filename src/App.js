@@ -32,7 +32,7 @@ function App() {
               <Container className="justify-content-center" fluid>
                 <Nav>
                   <Nav.Item>
-                    <Nav.Link href="#banner">
+                    <Nav.Link href="#home">
                       <AiOutlineHome />
                     </Nav.Link>
                   </Nav.Item>

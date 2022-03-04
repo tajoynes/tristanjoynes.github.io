@@ -1,5 +1,14 @@
+#banner {
+    clip-path: polygon(0 0, 100% 0,100% calc(100% - 50px), 50% 100%, 0 calc(100% - 50px));
+}
+#seperator-space {
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%,  0 calc(100% - 40px));
+    margin-top: -50px;
+    background: #17B890;
+}
+
 .banner-content-wrapper {
-    height: 80vh;
+    height: 100vh;
     width: auto;
     background-image: url(./images/demoimgone.jpg);
     background-position:center;
@@ -13,19 +22,47 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    color: aliceblue;
+    color: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #17B890;
     background-color: rgba(1, 0, 36, 0.8);
 }
+.home-content-header > .lastname::before{
+    content: '\003C\002F';
+    color: #FFF;
+}
+.home-content-header > .lastname::after{
+    content: '\003E';
+    color: #FFF;
+}
+.home-content-header > .firstname::before{
+    content: '\003C';
+    color: #FFF;
+}
+.home-content-header > .firstname::after{
+    content: '\003E';
+    color: #FFF;
+}
 .home-content-header {
-    font-size: 35px;
-    font-weight: 600;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    letter-spacing: .9rem;
+    font-size: 4.8vw;
+    font-weight: 400;
+    font-family: 'Permanent Marker';
+    letter-spacing: .5rem;
+    font-style: italic;
+}
+.home-content-header > .firstname {
+    color: #17B890;
+
+}
+.home-content-header > .lastname {
+    color: #17B890;
+
 }
 .home-content-sub {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.8vw;
+    font-family: "Permanent Marker", monospace;
     font-weight: 400;
-    letter-spacing: .5rem;
+    letter-spacing: 2.8px;
 }
 .contact-view-btn {
     border: 1px solid #FFF;
@@ -60,15 +97,36 @@
 .project-view-btn:hover > .banner-icons {
     color: #17B890;
 }
+#about {
+    clip-path: polygon(0 0, 100% 0,100% calc(100% - 50px), 50% 100%, 0 calc(100% - 50px));
+}
+.project-header-wrapper {
+    clip-path: polygon(0 0, 50% 50px,100% 0, 100% 100%, 0 100%);
+    margin-top: -40px;
+}
+.project-content-wrapper {
+    clip-path: polygon(0 0, 50% 50px,100% 0, 100% 100%, 0 100%);
+    margin-top: -50px;
+}
 .about-content-wrapper {
-    height: 60vh;
+    height: 100%;
     width: auto;
     background: #010024;
+}
+.about-text {
+    color: #FFF;
+    font-size: max(1.3vw, 12px);
+    font-family: 'Arvo', monospace;
+}
+.tech-header {
+    color:#FFF;
+    font-family: 'Arvo', monospace;
 }
 .project-header-wrapper {
     height: 10vh;
     width: auto;
     background: #17B890;
+    color: #FFF;
 }
 .project-content-wrapper {
     height: 100%;
@@ -136,6 +194,8 @@ transition: 700ms ease-in-out;
     color: #FFF;
     background: transparent;
     border: 1px solid #17B890;
+    font-family: "Arvo", sans-serif;
+    font-size: 2.4vw;
 }
 .contact-form-wrapper {
     border-top: 0.1px solid;
@@ -153,10 +213,15 @@ transition: 700ms ease-in-out;
 font-size: 26px;
 color: #FFF;
 border: 1px solid #010024;
+font-family: "Arvo";
 }
 .contact-card-header > .contact-sub {
     font-size: 12px;
     color: #17B890;
+}
+.contactlabel {
+    color: #FFF;
+    font-family: "Arvo", sans-serif;
 }
 .form-send-btn {
     border: 1px solid #010024;
@@ -164,6 +229,7 @@ border: 1px solid #010024;
     background: transparent;
     border-radius: 2px;
     transition: 500ms ease-in-out;
+    font-family: "Arvo", sans-serif;
 }
 .form-send-btn:hover {
     border: 1px solid #17B890;
@@ -176,6 +242,7 @@ border: 1px solid #010024;
     background: transparent;
     border-radius: 3px;
     transition: 500ms ease-in-out;
+    font-family: "Arvo", sans-serif;
 }
 .form-clr-btn:hover {
     border: 1px solid #b81717;
