@@ -27,12 +27,12 @@ function App() {
               />
             </NavbarBrand>
             <IconContext.Provider
-              value={{ className: "nav-icons", size: "1.8rem" }}
+              value={{ className: "nav-icons", size: "2.1rem" }}
             >
               <Container className="justify-content-center" fluid>
                 <Nav>
                   <Nav.Item>
-                    <Nav.Link href="#banner">
+                    <Nav.Link href="#home">
                       <AiOutlineHome />
                     </Nav.Link>
                   </Nav.Item>

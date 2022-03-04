@@ -1,5 +1,5 @@
 .display-wrapper {
-  background: #c3c9e9;
+  background: #010024;
   height: 100%;
   width: auto;
   overflow: hidden;
@@ -9,7 +9,7 @@
   background: transparent;
 }
 .nav-icons {
-  color: #ffffff;
+  color: #FFF;
   transition: 500ms ease-in-out;
 }
 .nav-icons:hover {
@@ -17,7 +17,7 @@
   transform: scale(1.05);
 }
 NavbarBrand, .initials {
-  color: #fff;
+  color: #FFF;
   text-shadow: 2px 2px 2px black;
 }
 
