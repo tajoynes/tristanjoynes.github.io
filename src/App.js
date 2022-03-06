@@ -1,4 +1,12 @@
-import { Card, Container, Navbar, NavbarBrand } from "react-bootstrap";
+import {
+  Card,
+  Container,
+  Navbar,
+  NavbarBrand,
+  Overlay,
+  OverlayTrigger,
+  Tooltip,
+} from "react-bootstrap";
 import "./App.css";
 import Main from "./Main.js";
 import { Row, Col, Nav } from "react-bootstrap";
@@ -11,6 +19,8 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { IconContext } from "react-icons";
+
+// const overlayNavIcon = <Tooltip>Go to </Tooltip>;
 
 function App() {
   return (
@@ -27,7 +37,7 @@ function App() {
               />
             </NavbarBrand>
             <IconContext.Provider
-              value={{ className: "nav-icons", size: "2.1rem" }}
+              value={{ className: "nav-icons", size: "1.7rem" }}
             >
               <Container className="justify-content-center" fluid>
                 <Nav>
